@@ -67,15 +67,6 @@ tail -f ./var/log/cowrie/cowrie.log
    - Monitor the Cowrie logs and captured data for suspicious activities.
    - Analyze attacker behavior and use the insights to enhance cybersecurity defenses.
 
-## Contributing
-Contributions to the Cowrie project are welcome! If you encounter issues or have suggestions for improvements, please open an issue or submit a pull request on the [Cowrie GitHub repository](https://github.com/cowrie/cowrie).
-
 ## License
 Cowrie is licensed under the GNU General Public License v2.0. See the [LICENSE](https://github.com/cowrie/cowrie/blob/master/LICENSE) file for details.
-
-## Acknowledgements
-We would like to thank the contributors to the Cowrie project for their valuable contributions and ongoing support.
-
-## Contact
-For questions or assistance, feel free to contact the maintainers of this repository.
 
