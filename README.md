@@ -1,7 +1,5 @@
 # Cowrie Honeypot on Akamai (formerly Linode)
 
-![Cowrie Logo](https://github.com/micheloosterhof/cowrie/raw/master/docs/cowrie.png)
-
 Welcome to the Cowrie honeypot setup on Akamai (formerly Linode) README file. This document provides instructions and information on setting up and using the Cowrie honeypot on the Akamai cloud platform.
 
 ## Introduction
