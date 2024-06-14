@@ -18,6 +18,7 @@ Follow these steps to deploy Cowrie honeypot on Akamai:
 COMMANDS
 --------------------------------------------------------------
 0. Change ssh port
+   
 sudo nano /etc/ssh/sshd_config
 
 sudo systemctl restart ssh
@@ -25,6 +26,7 @@ sudo systemctl restart ssh
 sudo systemctl status ssh
 
 1. Install python dependencies
+   
  sudo apt update
 
  sudo apt upgrade
@@ -32,14 +34,16 @@ sudo systemctl status ssh
 sudo apt-get install git python3-virtualenv libssl-dev libffi-dev build-essential libpython3-dev python3-minimal authbind virtualenv
 
 2. Create user account
+   
 sudo adduser --disabled-password cowrie
 
 su - cowrie
 
 3. Download cowrie
-git clone http ://github.com/cowrie/cowri
+   
+git clone http ://github.com/cowrie/cowrie
 
-4. Setup virtual environment
+5. Setup virtual environment
  virtualenv cowrie-env
 
  source cowrie-env/bin/activate
@@ -49,17 +53,23 @@ git clone http ://github.com/cowrie/cowri
  pip install --upgrade -r requirements.txt
 
 5. Enable telnet
- cp /etc/cowrie.cfg.dist cowrie.cfg
+6. 
+   nano cowrie.cfg
+   
+ cp home/cowrie/cowrie/etc/cowrie.cfg.dist cowrie.cfg
 
 6.Iptables
+
 sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222
 
 sudo iptables -t nat -A PREROUTING -p tcp --dport 23 -j REDIRECT --to-port 2223
 
 6. Start cowrie
+   
 bin/cowrie start
 
 7.live logs
+
 tail -f ./var/log/cowrie/cowrie.log
 
 
