@@ -41,7 +41,7 @@ su - cowrie
 
 3. Download cowrie
    
-git clone http ://github.com/cowrie/cowrie
+git clone https://github.com/cowrie/cowrie
 
 5. Setup virtual environment
  virtualenv cowrie-env
